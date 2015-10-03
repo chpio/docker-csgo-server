@@ -1,6 +1,10 @@
 #!/bin/sh
 set -e
 
-/opt/csgo/update_csgo_server
+steamcmd.sh \
+	+login anonymous \
+	+force_install_dir /opt/csgo \
+	+app_update 740 \
+	+quit
 
 exec /opt/csgo/srcds_run
