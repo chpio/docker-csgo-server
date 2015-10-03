@@ -1,10 +1,9 @@
 FROM chpio/steamcmd
 
-RUN mkdir /opt/csgo && chown steam:steam /opt/csgo
+ADD ./fs /
+RUN chown steam:steam -R /opt/csgo
 
 USER steam
-
-ADD ./fs /
 
 RUN /opt/csgo/update_csgo_server
 
