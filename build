@@ -1,4 +1,7 @@
 #!/bin/sh
-set -e
 
-docker build --pull --tag chpio/csgo-server "$(dirname "$(readlink -f $0)")/image"
+exec docker build \
+	--pull \
+	--tag chpio/csgo-server \
+	$@ \
+	"$(dirname "$(readlink -f $0)")/image"
