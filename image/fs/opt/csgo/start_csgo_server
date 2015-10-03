@@ -7,4 +7,4 @@ steamcmd.sh \
 	+app_update 740 \
 	+quit
 
-exec /opt/csgo/srcds_run
+exec /opt/csgo/srcds_run $@
