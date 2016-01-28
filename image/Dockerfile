@@ -8,6 +8,6 @@ RUN \
 		+app_update 740 verify \
 		+quit
 
-ADD ./start_csgo_server /opt/csgo/
+COPY start_csgo_server /usr/bin/
 
-ENTRYPOINT ["/opt/csgo/start_csgo_server"]
+ENTRYPOINT ["start_csgo_server"]
